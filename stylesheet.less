@@ -36,7 +36,6 @@ ol {
     &.extendednavigation {
         background-color: transparent;
         padding: 20px 0;
-        width: 80%;
         float: left;
         @media @tablet {
             width: 100%;
@@ -117,7 +116,7 @@ ol {
 }
 
 /* ===============================
-   CLICK TO CALL WIDGET IN HEADER
+   PROFILE WIDGETS IN HEADER
    =============================== */
 
 .bk-header {
@@ -140,6 +139,36 @@ ol {
         background-repeat: no-repeat;
         background-position: 0 center;
         padding: 15px 0px 15px 20px;
+    }
+    .bk-profile-address {
+        text-align: right;
+    }
+    form {
+        margin: 0;
+        @media @mobile {
+            margin: 1em 0;
+        }
+        fieldset input {
+            text-align: right;
+            width: 50%;
+            margin-bottom: 0;
+            @media @mobile {
+                margin-bottom: 1em;
+                text-align: center;
+            }
+        }
+        fieldset button {
+            text-align: right;
+        }
+    }
+    .bk-profile-socialicons {
+        margin: 0;
+    }
+    ul.twitter {
+        text-align: right;
+        time, span, span a {
+            display: block;
+        }
     }
 }
 
