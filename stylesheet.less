@@ -299,7 +299,9 @@ ol {
     margin-bottom: 20px;
     border: 1px solid darken(@color-swatch1,8%);
     background-color: lighten(@color-swatch1,5%);
-    width: 100%;
+    @media @mobile {
+        width: 100%;
+    }
 }
 
 
@@ -984,12 +986,6 @@ footer.blog-post-metadata time {
             li {
                 border-bottom: 1px dotted darken(@color-swatch1,30%);
                 padding: 3em 0;
-                @media @tablet {
-                    padding: 2em 0;
-                }
-                @media @mobile {
-                    padding: 1em 0;
-                }
                 .ecombasket-item-image {
                     width: 96px;
                     height: 96px;
