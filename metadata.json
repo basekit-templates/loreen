@@ -2,7 +2,7 @@
     "name":"Loreen",
     "thumbnail":"loreen.png",
     "screenshot":"loreen.png",
-    "templateType":"menu",
+    "templateType":"blog",
     "tags": {
     "en": ["clean", "menu", "cafe", "bar", "restaurant"],
     "es": ["limpio", "menú", "cafetería", "bar", "restaurante"],
