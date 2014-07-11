@@ -1,0 +1,148 @@
+{
+    "name":"Loreen",
+    "thumbnail":"loreen.png",
+    "screenshot":"loreen.png",
+    "templateType":"menu",
+    "tags": {
+    "en": ["clean", "menu", "cafe", "bar", "restaurant"],
+    "es": ["limpio", "menú", "cafetería", "bar", "restaurante"],
+    "br": ["limpo", "menu", "cafeteria", "bar", "restaurante"]
+    },
+    "images":["images/feature-img.jpg"],
+    "colorSwatches":
+    {
+        "Swatch 1": {
+            "color1":"#f4f2e9",
+            "color2":"#ffffff",
+            "color3":"#dc4d4d",
+            "color4":"#333333",
+            "color5":"#333333",
+            "color6":"#333333",
+            "color7":"#f4f2e9"
+        },
+        "Swatch 2": {
+            "color1":"#f4f2e9",
+            "color2":"#ffffff",
+            "color3":"#dc4d4d",
+            "color4":"#333333",
+            "color5":"#333333",
+            "color6":"#333333",
+            "color7":"#f4f2e9"
+        },
+        "Swatch 3": {
+            "color1":"#f4f2e9",
+            "color2":"#ffffff",
+            "color3":"#dc4d4d",
+            "color4":"#333333",
+            "color5":"#333333",
+            "color6":"#333333",
+            "color7":"#f4f2e9"
+        },
+        "Swatch 4": {
+            "color1":"#f4f2e9",
+            "color2":"#ffffff",
+            "color3":"#dc4d4d",
+            "color4":"#333333",
+            "color5":"#333333",
+            "color6":"#333333",
+            "color7":"#f4f2e9"
+        },
+        "Swatch 5": {
+            "color1":"#f4f2e9",
+            "color2":"#ffffff",
+            "color3":"#dc4d4d",
+            "color4":"#333333",
+            "color5":"#333333",
+            "color6":"#333333",
+            "color7":"#f4f2e9"
+        }
+    },
+    "fontSwatch": {
+       "title": "PT Sans / PT Mono",
+        "font1": {
+            "font-family": "\"PT Sans\", Tahoma, Geneva, sans-serif",
+            "font-size": "30px",
+            "font-weight": "400",
+            "line-height": "42px",
+            "color": "@color-swatch6",
+            "letter-spacing": "inherit"
+        },
+        "font2": {
+            "font-family": "\"PT Sans\", Tahoma, Geneva, sans-serif",
+            "font-size": "26px",
+            "font-weight": "inherit",
+            "line-height": "38px",
+            "color": "@color-swatch4",
+            "letter-spacing": "inherit"
+        },
+        "font3": {
+            "font-family": "\"PT Sans\", Tahoma, Geneva, sans-serif",
+            "font-size": "20px",
+            "font-weight": "400",
+            "line-height": "30px",
+            "color": "@color-swatch6",
+            "letter-spacing": "inherit"
+        },
+        "font4": {
+            "font-family": "\"PT Mono\", \"Courier New\", Courier, monospace",
+            "font-size": "14px",
+            "font-weight": "400",
+            "line-height": "26px",
+            "color": "@color-swatch5",
+            "letter-spacing": "inherit"
+        },
+        "font5": {
+            "font-family": "\"PT Mono\", \"Courier New\", Courier, monospace",
+            "font-size": "14px",
+            "font-weight": "400",
+            "line-height": "26px",
+            "color": "@color-swatch5",
+            "letter-spacing": "inherit"
+        },
+        "font6": {
+            "font-family": "\"PT Mono\", \"Courier New\", Courier, monospace",
+            "font-size": "14px",
+            "font-weight": "400",
+            "line-height": "26px",
+            "color": "@color-swatch6",
+            "color-hover": "darken(@color-swatch6,20%)",
+            "letter-spacing": "inherit",
+            "background-color": "@color-swatch7",
+            "background-color-hover": "@color-swatch7"
+        },
+        "font7": {
+            "font-family": "\"PT Mono\", \"Courier New\", Courier, monospace",
+            "font-size": "14px",
+            "font-weight": "400",
+            "line-height": "26px",
+            "color": "@color-swatch2",
+            "letter-spacing": "inherit",
+            "background-color": "@color-swatch3",
+            "background-color-hover": "darken(@color-swatch3,5%)"
+        },
+        "font8": {
+            "font-family": "\"PT Mono\", \"Courier New\", Courier, monospace",
+            "font-size": "16px",
+            "font-weight": "400",
+            "line-height": "28px",
+            "color": "@color-swatch2",
+            "letter-spacing": "inherit"
+        },
+        "font9": {
+            "font-family": "\"PT Mono\", \"Courier New\", Courier, monospace",
+            "font-size": "14px",
+            "font-weight": "400",
+            "line-height": "26px",
+            "color": "lighten(@color-swatch4,5%)",
+            "letter-spacing": "inherit"
+        },
+        "font10": {
+            "font-family": "\"PT Sans\", Tahoma, Geneva, sans-serif",
+            "font-size": "30px",
+            "font-weight": "400",
+            "line-height": "32px",
+            "color": "lighten(@color-swatch4,5%)",
+            "letter-spacing": "inherit"
+        }
+    }
+}
