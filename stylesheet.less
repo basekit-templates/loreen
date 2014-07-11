@@ -208,20 +208,19 @@ ol {
 }
 
 .header-info .widget.profile form fieldset input {
-    border: 1px solid darken(@color-swatch7,7%);
     margin-bottom: 10px;
-    background-color: lighten(@color-swatch7,6%);
-    width: 40%;
+    width: 50%;
     text-align: center;
+    @media @mobile {
+        width: 100%;
+    }
 }
 
 .header-info .widget.profile form button {
-    background-color: darken(@color-swatch7,7%);
-    border: 1px solid darken(@color-swatch7,9%);
     margin: 0 auto;
-    display: block;
-    &:hover {
-        background-color: darken(@color-swatch7,10%);
+    @media @mobile {
+        display: block;
+        width: 100%;
     }
 }
 
