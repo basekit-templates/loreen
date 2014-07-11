@@ -1563,6 +1563,19 @@ span.ecom-product-category {
     padding: 4em 0;
     .widget.profile {
         color: @color-swatch2;
+        .bk-profile-address, .bk-profile-email, .twitter li .twitter-content a, .twitter li .twitter-content a span.bk-full-name, .twitter li .twitter-content p, .twitter li .twitter-content p a {
+            color: @color-swatch2;
+        }
+        .twitter li .twitter-content a span.bk-full-name, .twitter li .twitter-content p a, .widget.profile ul.twitter span a {
+            text-decoration: underline;
+            &:hover {
+                text-decoration: none;
+            }
+        }
+        .widget.profile ul.twitter .twitter-profile-pic, .widget.profile ul.twitter time, .widget.profile ul.twitter span, .widget.profile ul.twitter span a {
+            display: block;
+            color: @color-swatch2;
+        }
     }
 }
 
