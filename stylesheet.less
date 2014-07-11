@@ -862,17 +862,17 @@ hr {
     .blog-post-feature-image-wrap {
         background-image: none !important;
         background-repeat: no-repeat;
-        max-height: 500px;
         img {
             display: block;
             margin: 0 auto 2em;
             max-width: 100%;
-        }
-        @media @tablet {
+            max-height: 500px;
+            @media @tablet {
             max-height: 400px;
-        }
-        @media only screen and (max-width: 650px) {
-            max-height: 250px;
+            }
+            @media only screen and (max-width: 650px) {
+                max-height: 250px;
+            }
         }
     }/* end blog-post-feature-image-wrap */
     .blog-post-title a {
