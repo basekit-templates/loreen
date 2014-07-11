@@ -157,16 +157,23 @@ ol {
             @media @mobile {
                 margin-bottom: 1em;
                 text-align: center;
+                width: 100%;
             }
         }
     }
     .bk-profile-socialicons {
         margin: 0;
+        @media @tablet {
+            text-align: center;
+            padding: 20px 0;
+        }
     }
     ul.twitter {
-        text-align: right;
         time, span, span a {
             display: block;
+        }
+        @media @tablet {
+            text-align: center;
         }
     }
 }
