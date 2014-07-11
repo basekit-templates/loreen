@@ -265,56 +265,14 @@ ol {
 
 
 /* ===============================
-   FEATURE = IMAGE WIDGET
+   IMAGE WIDGET
    =============================== */
 
-.widget.image {
-    img.image {
-        margin-bottom: 1.5em;
-        @media @mobile {
-            margin: 0 auto;
-        }
-    }
-    span.image-title {
-        font-family: @font-swatch8-font-family;
-        font-size: @font-swatch8-font-size;
-        font-weight: @font-swatch8-font-weight;
-        line-height: @font-swatch8-line-height;
-        color: @font-swatch8-color;
-        letter-spacing: @font-swatch8-letter-spacing;
-        width: 100%;
-        padding: 1% 5% 0;
-        margin: 0;
-        clear: both;
-        &:hover {
-            text-decoration: none;
-        }
-    }
-    span.image-description {
-        font-family: @font-swatch9-font-family;
-        font-size: @font-swatch9-font-size;
-        font-weight: @font-swatch9-font-weight;
-        line-height: @font-swatch9-line-height;
-        color: @font-swatch9-color;
-        letter-spacing: @font-swatch9-letter-spacing;
-        width: 100%;
-        padding: 1% 5%;
-        margin: 0;
-        clear: both;
-        &:hover {
-            text-decoration: none;
-        }
-    }
-    &:hover {
-        span.image-title, span.image-description {
-            text-decoration: none;
-            color: @color-swatch4;
-        }
-    }
-}
-
-.main .widget.image { 
+.widget.image img.image {
     margin-bottom: 2em;
+    @media @mobile {
+        margin: 0 auto;
+    }
 }
 
 /* ===============================
