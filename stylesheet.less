@@ -142,6 +142,9 @@ ol {
     }
     .bk-profile-address {
         text-align: right;
+        @media @tablet {
+            text-align: center;
+        }
     }
     form {
         margin: 0;
@@ -149,16 +152,12 @@ ol {
             margin: 1em 0;
         }
         fieldset input {
-            text-align: right;
             width: 50%;
             margin-bottom: 0;
             @media @mobile {
                 margin-bottom: 1em;
                 text-align: center;
             }
-        }
-        fieldset button {
-            text-align: right;
         }
     }
     .bk-profile-socialicons {
