@@ -75,10 +75,15 @@ ol {
                 }
             }
             li:hover {
-                background-color: lighten(@color-swatch7,5%);
+                background-color: lighten(@color-swatch7,10%);
                 a {
                     color:@color-swatch2;
                     padding: 5px 20px;
+                }
+                &.selected {
+                    ul li a .text {
+                        color: @color-swatch2;
+                    }
                 }
                 &.folder {
                     &:after {
