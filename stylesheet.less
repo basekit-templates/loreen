@@ -90,16 +90,11 @@ ol {
                         color: @color-swatch2;
                         padding: 5px 40px 5px 20px;
                     }
-                    &.selected {
-                        ul li a .text {
-                            color: @color-swatch2;
-                        }
-                    }
                     ul {
                         li a .text {
                             color: @color-swatch6;
                         }
-                        li:hover a .text {
+                        li.selected a .text, li:hover a .text {
                             color:@color-swatch2;
                         }
                     }
