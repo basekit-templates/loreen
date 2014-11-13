@@ -234,6 +234,7 @@ ol {
 
 .widget.twitter .bk-full-name {
     color: @color-swatch3;
+    font-size: @font-swatch5-font-size;
 }
 
 .widget.twitter ul li span a {
@@ -241,6 +242,12 @@ ol {
     text-decoration: none;
     &:hover {
         text-decoration: underline;
+    }
+}
+
+.widget.twitter {
+    time, span, span a {
+        font-size: bk-scale(@font-swatch5-font-size, 0.85);
     }
 }
 
@@ -782,10 +789,26 @@ hr {
             margin: 0 auto;
             list-style: none;
             padding: 0;
-            li {
-                display: inline-block;
-                padding: 0 15px 10px 0;
-                margin: 0;
+                li {
+                    display: inline-block;
+                    padding: 0 15px 10px 0;
+                    margin: 0;
+                    &:after {
+                        color: #a5a5a5;
+                        content: "\00b0";
+                        display: inline-block;
+                        font-size: 16px;
+                        margin-left: 16px;
+                        position: relative;
+                        vertical-align: middle;
+                        top: 2px;
+                        @media @tablet {
+                            display: none;
+                        }
+                }
+                &:last-child:after {
+                    display: none;
+                }
                 &:last-child {
                     padding-right: 0;
                     @media only screen and (max-width: 550px) {
@@ -939,10 +962,16 @@ hr {
     border-bottom: 1px dotted darken(@color-swatch1,15%);
 }
 
+.blog-post-list {
+    article.blog-post-item:last-child {
+        border-bottom: none;
+    }
+}
+
 .blog-post-item {
     margin: 3.5em 0;
     @media @mobile {
-        margin: 1em 0;
+        margin: 3em 0 0;
     }
     .blog-post-feature-image-wrap {
         background-image: none !important;
@@ -1002,6 +1031,8 @@ hr {
 .blog-post-item {
     text-align: center;
     footer.blog-post-metadata {
+        border-top: 1px solid lighten(@color-swatch5, 65%);
+        padding-top: 15px;
         margin: 1.5em;
     }
 }
@@ -1062,7 +1093,6 @@ hr {
    =============================== */
 
 time.blog-post-published-date, footer.blog-post-metadata time {
-    padding: 1em 2em;
     display: inline-block;
     font-size: @font-swatch5-font-size;
     line-height: @font-swatch5-line-height;
@@ -1070,11 +1100,13 @@ time.blog-post-published-date, footer.blog-post-metadata time {
 }
 
 time.blog-post-published-date {
+    padding: 1em 2em;
     margin: 0 0 1.5em;
 }
 
 footer.blog-post-metadata time {
-    margin: 2em 0 1.5em;
+    padding: 0 2em;
+    margin: 0.5em 0 1.5em;
 }
 
 /* ===============================
@@ -1187,6 +1219,9 @@ footer.blog-post-metadata time {
         margin-bottom: 1em;
         @media @mobile {
             margin: 0;
+        }
+        label {
+            display: block;
         }
         .productlist-display-form {
             .form-group {
@@ -1337,6 +1372,9 @@ footer.blog-post-metadata time {
 
 .widget.ecomproduct {
     padding: 3em 0 5em;
+    @media @mobile {
+        padding-bottom: 2em;
+    }
 }
 
 .widget.ecomproduct .ecom-product .ecom-product-images-container {
