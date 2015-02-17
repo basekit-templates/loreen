@@ -3,30 +3,28 @@
 {% block content %}
 
 <div class="bk-pt-default">
-<header class="bk-header wrapper clearfix">
-    {{widget('extendednavigation', 'navigationheader', {"align":"left"})|raw}}
-     {{widget('profile', 'phone', {'profileType':'phone'})|raw}}
-</header>
-<div class="header-canvas">
-    <div class="companyheader">
-        {{widget('logo', 'logo', {"defaultlogo": asset('images/logo.png')})|raw}}
-        {{widget('companyname', 'companyname', {"business": "profile"})|raw}}
+    <header class="bk-header wrapper clearfix">
+        {{widget('extendednavigation', 'navigationheader', {"align":"left"})|raw}}
+    </header>
+    <div class="header-canvas">
+        <div class="companyheader">
+            {{widget('logo', 'logo', {"defaultlogo": asset('images/logo.png')})|raw}}
+            {{widget('companyname', 'companyname', {"business": "profile"})|raw}}
+        </div>
+        <div class="header-info">
+            {{widget('profile', 'strapline', { 'profileType':'strapline'})|raw}}
+            {{widget('profile', 'phone', {'profileType':'phone'})|raw}}
+        </div>
     </div>
-    <div class="header-info">
-        {{widget('profile', 'headline', { 'profileType':'headline'})|raw}}
-        {{widget('profile', 'strapline', { 'profileType':'strapline'})|raw}}
-        {{widget('profile', 'email', { 'profileType':'email'})|raw}}
-    </div>
-</div>
-<div class="main wrapper clearfix">
-    {{zone('main')|raw}}
-</div> <!--end main -->
+    <div class="main wrapper clearfix">
+        {{zone('main')|raw}}
+    </div> <!--end main -->
 
-<footer class="bk-footer clearfix">
-    <div class="footer-info wrapper">
-        {{widget('profile', 'copyright', { 'profileType':'copyright'})|raw}}
-    </div>
-</footer>
+    <footer class="bk-footer clearfix">
+        <div class="footer-info wrapper">
+            {{widget('profile', 'copyright', { 'profileType':'copyright'})|raw}}
+        </div>
+    </footer>
 
 </div>
 
