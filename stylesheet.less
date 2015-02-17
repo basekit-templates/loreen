@@ -36,12 +36,12 @@ ol {
     &.extendednavigation {
         background-color: transparent;
         padding: 20px 0;
-        float: left;
+        .clearfix;
         @media @tablet {
             width: 100%;
             max-width: 100%;
             min-height: 45px;
-            background-color: hsla(hue(@color-swatch2), saturation(@color-swatch2), lightness(lighten(@color-swatch2,10%)), 0.6); 
+            background-color: hsla(hue(@color-swatch2), saturation(@color-swatch2), lightness(lighten(@color-swatch2,10%)), 0.6);
             border: 1px solid darken(@color-swatch1,2%);
         }
         ul {
@@ -271,50 +271,30 @@ ul.twitter {
    HEADER
    =============================== */
 
-.header-canvas {
-    background-color: hsla(hue(@color-swatch2), saturation(@color-swatch2), lightness(lighten(@color-swatch2,10%)), 0.6); 
-    border: 1px solid darken(@color-swatch1,2%);
-    -webkit-box-shadow: 7px 7px 5px 0px rgba(50, 50, 50, 0.05);
-    -moz-box-shadow:    7px 7px 5px 0px rgba(50, 50, 50, 0.05);
-    box-shadow:         7px 7px 5px 0px rgba(50, 50, 50, 0.05);
-    clear: both;
-    margin: 0 3%;
-    @media @tablet {
-        margin: 0 5%;
-        width: 90%;
-    }
+.companyheader, .header-info {
+		background-color: lighten(@color-swatch1, 10%);
+	.widget {
+		max-width: 960px;
+		margin: 0 auto;
+		text-align: center;
+	}
+	.widget:first-of-type {
+		padding-top: 20px;
+	}
+	.widget:last-of-type {
+		padding-bottom: 20px;
+	}
 }
 
 .companyheader {
-    margin: 4em 0 2.8em;
-    width: 100%;
-    float: left;
-    padding: 0 4em;
-    @media @mobile {
-        margin: 2em 0;
-        padding: 0 5%;
-    }
-    .logo, .companyname {
-        text-align: center;
-    }
+	box-shadow: inset 0 1px 1px fadeout(@color-swatch5, 80%);
 }
 
 .header-info {
-    clear: both;
-    padding: 0 4em 4em;
-    text-align: center;
-    max-width: 960px;
-    margin: 0 auto;
-    @media @mobile {
-        padding: 0 5% 10%;
-    }
+	box-shadow: inset 0 -1px 1px fadeout(@color-swatch5, 80%);
 }
 
 .header-info .widget.profile span.bk-profile-headline {
-    background-color: @color-swatch7;
-    padding: 5px 20px;
-    margin-bottom: 10px;
-    display: inline-block;
     font-family:@font-swatch8-font-family;
     font-size:@font-swatch8-font-size;
     font-weight: @font-swatch8-font-weight;
@@ -322,41 +302,6 @@ ul.twitter {
     color: @font-swatch8-color;
     letter-spacing: @font-swatch8-letter-spacing;
 }
-
-.header-info .widget.profile .bk-profile-address p {
-    display: inline-block;
-    padding-right: 5px;
-    color: @font-swatch6-color;
-}
-
-.header-info .widget.profile span, .bk-header .widget.profile .twitter .twitter-content p {
-     color: @font-swatch6-color;
-}
-
-.header-info .widget.profile {
-    margin-bottom: 5px;
-    .twitter, .map, form {
-         margin: 2% 0 0;
-    }
-}
-
-.header-info .widget.profile form fieldset input {
-    margin-bottom: 10px;
-    width: 50%;
-    text-align: center;
-    @media @mobile {
-        width: 100%;
-    }
-}
-
-.header-info .widget.profile form button {
-    margin: 0 auto;
-    @media @mobile {
-        display: block;
-        width: 100%;
-    }
-}
-
 
 /* ===============================
    IMAGE WIDGET
@@ -437,17 +382,19 @@ ul.twitter {
 =============================== */
 
 .widget.button button,
-button.btn, 
-.widget.profile form button, 
-.signupform fieldset button, 
-.contactform button.btn, 
-.btn, 
-.blogsearch form button, 
-.checkout-order-button, 
+button.btn,
+.widget.profile form button,
+.signupform fieldset button,
+.contactform button.btn,
+.btn,
+.blogsearch form button,
+.checkout-order-button,
 .checkout-empty-link,
 .tweet a,
 .widget.paypalbuynow .widget.button.paypal,
-.blog-post-more-link a {
+.blog-post-more-link a,
+.ecombasket-remove-button,
+.widget.ecombasket .ecombasket-list-container ul li .ecombasket-item-info .ecombasket-remove-button {
     font-family: @font-swatch7-font-family;
     color: @font-swatch7-color;
     font-size: @font-swatch7-font-size;
@@ -461,25 +408,22 @@ button.btn,
     -o-border-radius: 0px;
     border-radius: 0px;
     margin: 5px 0;
-    padding: 8px 10px;
+    padding: 8px 14px;
     text-decoration: none;
-    -webkit-box-shadow: 3px 2px 1px 0px lighten(@color-swatch4,40%);
-    -moz-box-shadow:    3px 3px 1px 0px lighten(@color-swatch4,40%);
-    box-shadow:         3px 3px 1px 0px lighten(@color-swatch4,40%);
     @media @mobile {
         padding: 10px 15px;
     }
     &:hover {
         background-color: @font-swatch7-background-color-hover;
     }
-} 
+}
 
 
-.widget.profile form button, 
-.signupform fieldset button, 
-.contactform button.btn, 
-.blogsearch form button, 
-.checkout-order-button, 
+.widget.profile form button,
+.signupform fieldset button,
+.contactform button.btn,
+.blogsearch form button,
+.checkout-order-button,
 .checkout-empty-link,
 .form-group.productlist-search .btn {
     @media @mobile {
@@ -511,9 +455,6 @@ button.btn,
             -ms-border-radius: 0px;
             -o-border-radius: 0px;
             border-radius: 0px;
-            -webkit-box-shadow: 3px 2px 1px 0px lighten(@color-swatch4,40%);
-            -moz-box-shadow:    3px 3px 1px 0px lighten(@color-swatch4,40%);
-            box-shadow:         3px 3px 1px 0px lighten(@color-swatch4,40%);
             margin: 5px 0;
             &:hover {
                 background-color: @font-swatch7-background-color-hover;
@@ -530,9 +471,6 @@ button.btn,
     -ms-border-radius: 0px;
     -o-border-radius: 0px;
     border-radius: 0px;
-    -webkit-box-shadow: 3px 2px 1px 0px lighten(@color-swatch4,40%);
-    -moz-box-shadow:    3px 3px 1px 0px lighten(@color-swatch4,40%);
-    box-shadow:         3px 3px 1px 0px lighten(@color-swatch4,40%);
     &:hover {
         text-decoration: none;
     }
@@ -541,7 +479,7 @@ button.btn,
         display: block;
         text-align: center;
     }
-} 
+}
 
 .widget.paypalbuynow .widget.button.paypal {
     background-position: 20px;
@@ -556,7 +494,7 @@ button.btn,
     }
 }
 
-    
+
 /* PNG Icons */
 
 .widget.ecombasket .ecombasket-pull p:before,
@@ -605,9 +543,6 @@ button.btn,
 .widget.profile .bk-profile-socialicons span a,
 .widget.socialicons span a  {
     background-color: @color-swatch4;
-    -webkit-box-shadow: 3px 2px 1px 0px lighten(@color-swatch4,40%);
-    -moz-box-shadow:    3px 3px 1px 0px lighten(@color-swatch4,40%);
-    box-shadow:         3px 3px 1px 0px lighten(@color-swatch4,40%);
     margin-right: 8px;
 }
 
@@ -858,7 +793,7 @@ hr {
                     &.menu-item-promoted { /* menu-item-promoted */
                         display: inline-block;
                         .inner-item {
-                            &:before { 
+                            &:before {
                                 content: "\2605";
                                 font-size: 20px;
                                 position: absolute;
@@ -871,7 +806,7 @@ hr {
                                 padding-left: 25px;
                                 color: @color-swatch3;
                             }
-                        }  
+                        }
                     }/* end menu-item-promoted */
                     .inner-item {
                         .menu-item-image-wrap {
@@ -905,9 +840,9 @@ hr {
                                 margin-bottom: 5px;
                                 padding: 0 3px;
                                 position: relative;
-                                &:before { 
+                                &:before {
                                     content: "\2605";
-                                    font-size: 10px;  
+                                    font-size: 10px;
                                     color: @color-swatch3;
                                 }
                             }
@@ -921,11 +856,8 @@ hr {
             .menu-subsection {
                 padding: 0;
                 margin: 0;
-                .menu-subsection-promoted { /* PROMOTED SUB-SECTION */ 
-                    background-color: hsla(hue(@color-swatch2), saturation(@color-swatch2), lightness(lighten(@color-swatch2,10%)), 0.6); 
-                    -webkit-box-shadow: 7px 7px 5px 0px rgba(50, 50, 50, 0.05);
-                    -moz-box-shadow:    7px 7px 5px 0px rgba(50, 50, 50, 0.05);
-                    box-shadow:         7px 7px 5px 0px rgba(50, 50, 50, 0.05);
+                .menu-subsection-promoted { /* PROMOTED SUB-SECTION */
+                    background-color: hsla(hue(@color-swatch2), saturation(@color-swatch2), lightness(lighten(@color-swatch2,10%)), 0.6);
                     padding: 0 2em 2em;
                     margin: 2em 0 1em;
                     position: relative;
@@ -1016,9 +948,6 @@ hr {
     padding: 8px 10px;
     text-decoration: none;
     background-color: @color-swatch4;
-    -webkit-box-shadow: 3px 2px 1px 0px lighten(@color-swatch4,40%);
-    -moz-box-shadow:    3px 3px 1px 0px lighten(@color-swatch4,40%);
-    box-shadow:         3px 3px 1px 0px lighten(@color-swatch4,40%);
     &:hover {
         background-color: lighten(@color-swatch4,10%);
     }
@@ -1060,27 +989,18 @@ hr {
         margin-right: 5px;
         &.btn.facebook {
             background-color: #3b5998;
-            -webkit-box-shadow: 3px 2px 2px 0px darken(#3b5998,25%);
-            -moz-box-shadow:    3px 3px 2px 0px darken(#3b5998,25%);
-            box-shadow:         3px 3px 2px 0px darken(#3b5998,25%);
             &:hover {
                 background-color:darken(#3b5998,5%);
             }
         }
         &.btn.twitter {
             background-color: #4099FF;
-            -webkit-box-shadow: 3px 2px 2px 0px darken(#4099FF,25%);
-            -moz-box-shadow:    3px 3px 2px 0px darken(#4099FF,25%);
-            box-shadow:         3px 3px 2px 0px darken(#4099FF,25%);
             &:hover {
                 background-color:darken(#4099FF,5%);
             }
         }
         &.btn.googleplus {
             background-color: #d34836;
-            -webkit-box-shadow: 3px 2px 2px 0px darken(#d34836,25%);
-            -moz-box-shadow:    3px 3px 2px 0px darken(#d34836,25%);
-            box-shadow:         3px 3px 2px 0px darken(#d34836,25%);
             &:hover {
                 background-color:darken(#d34836,5%);
             }
@@ -1124,16 +1044,6 @@ footer.blog-post-metadata time {
                     width: 96px;
                     height: 96px;
                 }
-                .ecombasket-item-info {
-                    .ecombasket-item-title, .ecombasket-remove-button {
-                        color: @color-swatch3;
-                        text-decoration: none;
-                        &:hover {
-                            color: @color-swatch3;
-                            text-decoration: underline;
-                        }
-                    }
-                }
             }
         }
     }
@@ -1166,7 +1076,7 @@ footer.blog-post-metadata time {
         width: 100%;
     }
     .ecom-featuredproducts-image-wrap {
-        background-color: transparent;
+        background-color: lighten(@color-swatch1, 2%);
         margin-bottom: 1em;
         @media @mobile {
             background-image: none !important;
@@ -1297,7 +1207,7 @@ footer.blog-post-metadata time {
         }
         .ecom-productslist-image-wrap {
             margin-bottom: 1.5em;
-            background-color: transparent;
+            background-color: lighten(@color-swatch1, 2%);
             @media @mobile {
                 background-image: none !important;
                 background-repeat: no-repeat;
@@ -1453,10 +1363,6 @@ span.ecom-product-category {
 .widget.ecomproduct .ecom-product .btn.ecom-product-add-to-cart-btn.added {
     color: #ffffff;
     background-color: green;
-    -webkit-box-shadow: 3px 2px 2px 0px darken(green,25%);
-    -moz-box-shadow:    3px 3px 2px 0px darken(green,25%);
-    box-shadow:         3px 3px 2px 0px darken(green,25%);
-
 }
 
 .widget.ecomproduct .ecom-product .btn.ecom-product-go-to-checkout-btn:hover {
@@ -1539,7 +1445,7 @@ span.ecom-product-category {
         }
         .form-group {
             width: 100%;
-            @media only screen and (max-width: 1200px) { 
+            @media only screen and (max-width: 1200px) {
                 width: 100%;
             }
             label {
@@ -1679,6 +1585,33 @@ span.ecom-product-category {
 }
 
 /* ===============================
+  ECOM BASKET SUMMARY
+   =============================== */
+
+table {
+	width: 100%;
+	.image-wrap {
+		text-align: center;
+		background-color: lighten(@color-swatch1, 2%);
+		background-position: -9999px 0;
+		line-height: 100px;
+		img {
+			vertical-align: middle;
+			line-height: 0;
+		}
+	}
+	td {
+		padding: 5px;
+	}
+}
+
+.basket-summary-quantitybtn {
+	.btn {
+		line-height: bkscale(@font-swatch7-line-height, 0.5);
+	}
+}
+
+/* ===============================
   ECOM CATEGORIES LIST
    =============================== */
 
@@ -1691,7 +1624,7 @@ span.ecom-product-category {
 
 
 /* ===============================
-  FOOTER 
+  FOOTER
    =============================== */
 
 
@@ -1705,11 +1638,6 @@ span.ecom-product-category {
         color: @color-swatch2;
         form fieldset input {
             text-align: center;
-        }
-        form fieldset button {
-        -webkit-box-shadow: 3px 2px 1px 0px darken(@color-swatch4,30%);
-        -moz-box-shadow:    3px 3px 1px 0px darken(@color-swatch4,30%);
-        box-shadow:         3px 3px 1px 0px darken(@color-swatch4,30%);
         }
         .bk-profile-address p, .bk-profile-email a, .twitter li .twitter-content a, .twitter li .twitter-content a span.bk-full-name, .twitter li .twitter-content p, .twitter li .twitter-content p a {
             color: @color-swatch2;
@@ -1729,9 +1657,6 @@ span.ecom-product-category {
         }
         .bk-profile-socialicons span a {
             background-color: @color-swatch4;
-            -webkit-box-shadow: 3px 2px 1px 0px darken(@color-swatch4,30%);
-            -moz-box-shadow:    3px 3px 1px 0px darken(@color-swatch4,30%);
-            box-shadow:         3px 3px 1px 0px darken(@color-swatch4,30%);
         }
     }
 }
