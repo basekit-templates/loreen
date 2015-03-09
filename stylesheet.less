@@ -41,8 +41,11 @@ ol {
             width: 100%;
             max-width: 100%;
             min-height: 45px;
-            background-color: hsla(hue(@color-swatch2), saturation(@color-swatch2), lightness(lighten(@color-swatch2,10%)), 0.6);
             border: 1px solid darken(@color-swatch1,2%);
+            background-color: hsla(hue(@color-swatch2),
+                                   saturation(@color-swatch2),
+                                   lightness(lighten(@color-swatch2,10%)),
+                                   0.6);
         }
         ul {
             li {
@@ -137,10 +140,11 @@ ol {
                 }
             }
             &.pull:after {
-                background: @font-swatch6-color;
-                box-shadow: 0 6px 0 @font-swatch6-color, 0 12px 0 @font-swatch6-color;
                 left: 50%;
                 margin-left: -13px;
+                background: @font-swatch6-color;
+                box-shadow: 0 6px 0 @font-swatch6-color,
+                            0 12px 0 @font-swatch6-color;
             }
         }
     }
@@ -157,64 +161,7 @@ ol {
     }
 }
 
-.bk-header .widget.profile {
-    float: right;
-    padding: 25px 0;
-    @media @tablet {
-        width: 100%;
-        text-align: center;
-    }
-    .bk-profile-phone {
-        color: @font-swatch6-color;
-        background-image: image('/images/icon-phone-grey.png');
-        background-repeat: no-repeat;
-        background-position: 0 center;
-        padding: 15px 0px 15px 20px;
-    }
-    .bk-profile-address p {
-        display: inline-block;
-        padding-right: 10px;
-    }
-    form {
-        margin: 0;
-        @media @mobile {
-            margin: 1em 0;
-        }
-        fieldset input {
-            width: 30%;
-            margin-bottom: 0;
-            @media @tablet {
-                width: 40%;
-            }
-            @media @mobile {
-                margin-bottom: 1em;
-                text-align: center;
-                width: 100%;
-            }
-        }
-    }
-    .bk-profile-socialicons {
-        margin: 0;
-        @media @tablet {
-            text-align: center;
-            padding: 20px 0;
-        }
-    }
-    ul.twitter {
-        border-right: 2px solid @color-swatch4;
-        padding-right: 10px;
-        text-align: right;
-        .twitter-content {
-            padding-left: 0;
-        }
-        time, span, span a {
-            display: inline-block;
-        }
-        @media @tablet {
-            text-align: center;
-        }
-    }
-}
+.header-info .widget.profile ul.twitter .twitter-content { padding-left: 0; }
 
 // Address
 .bk-profile-address {
@@ -1882,7 +1829,7 @@ span.ecom-product-category {
     background-image:image('/images/halftone-dark-texture.png');
     text-align: center;
     padding: 4em 0;
-    margin: 3em 0;
+    margin: 3em 0 0;
     .widget.profile {
         color: @color-swatch2;
         form fieldset input {
