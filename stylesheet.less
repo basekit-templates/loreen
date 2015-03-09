@@ -271,27 +271,45 @@ ul.twitter {
    HEADER
    =============================== */
 
-.companyheader, .header-info {
-		background-color: lighten(@color-swatch1, 10%);
+.header-canvas {
+    width: 95%;
+    margin: 0 2.5%;
+    border: 1px solid fade(@color-swatch4, 10%);
+    @media @tablet {
+        width: 90%;
+        margin: 2% 5% 0;
+    }
+}
+
+.companyheader,
+.header-info {
+    background-color: hsla(hue(@color-swatch1),
+                           saturation(@color-swatch1),
+                           lightness(lighten(@color-swatch1,20%)),
+                           0.4);
 	.widget {
 		max-width: 960px;
 		margin: 0 auto;
 		text-align: center;
 	}
-	.widget:first-of-type {
-		padding-top: 20px;
-	}
-	.widget:last-of-type {
-		padding-bottom: 20px;
-	}
 }
 
 .companyheader {
-	box-shadow: inset 0 1px 1px fadeout(@color-swatch5, 80%);
+    .widget:first-of-type {
+        padding-top: 30px;
+    }
+    .widget:last-of-type {
+        padding-bottom: 10px;
+    }
 }
 
 .header-info {
-	box-shadow: inset 0 -1px 1px fadeout(@color-swatch5, 80%);
+    .widget:first-of-type {
+        padding-top: 20px;
+    }
+    .widget:last-of-type {
+        padding-bottom: 30px;
+    }
 }
 
 .header-info .widget.profile span.bk-profile-headline {

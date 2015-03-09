@@ -4,7 +4,7 @@
 
 <div class="bk-pt-home">
     <header class="bk-header wrapper clearfix">
-        {{widget('extendednavigation', 'navigationheader', {"align":"left"})|raw}}
+        {{widget('extendednavigation', 'navigationheader', {"align":"center"})|raw}}
     </header>
     <div class="header-canvas">
         <div class="companyheader">
@@ -12,8 +12,9 @@
             {{widget('companyname', 'companyname', {"business": "profile"})|raw}}
         </div>
         <div class="header-info">
+            {{widget('profile', 'headline', { 'profileType':'headline'})|raw}}
             {{widget('profile', 'strapline', { 'profileType':'strapline'})|raw}}
-            {{widget('profile', 'phone', {'profileType':'phone'})|raw}}
+            {{widget('profile', 'email', {'profileType':'email'})|raw}}
         </div>
     </div>
     <div class="main wrapper clearfix">
