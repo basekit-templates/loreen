@@ -204,6 +204,9 @@ ol {
         border-right: 2px solid @color-swatch4;
         padding-right: 10px;
         text-align: right;
+        .twitter-content {
+            padding-left: 0;
+        }
         time, span, span a {
             display: inline-block;
         }
@@ -215,6 +218,9 @@ ol {
 
 // Address
 .bk-profile-address {
+    p {
+        padding-bottom: 0;
+    }
     p:after {
         content: "\002C";
     }
@@ -292,6 +298,14 @@ ul.twitter {
 		margin: 0 auto;
 		text-align: center;
 	}
+    .widget:first-of-type {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+    .widget:last-of-type {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
 }
 
 .companyheader {
@@ -1868,26 +1882,46 @@ span.ecom-product-category {
     background-image:image('/images/halftone-dark-texture.png');
     text-align: center;
     padding: 4em 0;
-    margin-top: 3em;
+    margin: 3em 0;
     .widget.profile {
         color: @color-swatch2;
         form fieldset input {
             text-align: center;
         }
-        .bk-profile-address p, .bk-profile-email a, .twitter li .twitter-content a, .twitter li .twitter-content a span.bk-full-name, .twitter li .twitter-content p, .twitter li .twitter-content p a {
+        .bk-profile-address p,
+        .bk-profile-email a,
+        .twitter li .twitter-content a,
+        .twitter li .twitter-content a span.bk-full-name,
+        .twitter li .twitter-content p,
+        .twitter li .twitter-content p a {
             color: @color-swatch2;
             padding-bottom: 0;
         }
-        .bk-profile-email a, .twitter li .twitter-content a span.bk-full-name, .twitter li .twitter-content p a, .widget.profile ul.twitter span a {
+        .bk-profile-email a,
+        .twitter li .twitter-content a span.bk-full-name,
+        .twitter li .twitter-content p a,
+        .widget.profile ul.twitter span a {
             text-decoration: underline;
             &:hover {
                 text-decoration: none;
             }
         }
         ul.twitter {
-            .twitter-profile-pic, time, span, span a {
+            .twitter-profile-pic {
                 display: block;
                 color: @color-swatch2;
+                margin-right: 0;
+            }
+            time, span, span a {
+                color: @color-swatch2;
+            }
+            .twitter-content {
+                padding-left: 0;
+                max-width: 75%;
+                margin: 0 auto;
+                @media @mobile {
+                    max-width: 100%;
+                }
             }
         }
         .bk-profile-socialicons span a {
