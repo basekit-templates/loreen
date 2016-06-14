@@ -1,7 +1,7 @@
 {
     "name":"Loreen",
     "thumbnail":"loreen.png",
-    "screenshot":"loreen.png",
+    "screenshot":"loreen-screenshot.jpg",
     "templateType":"blog",
     "pageTypes":["home"],
     "tags": {
