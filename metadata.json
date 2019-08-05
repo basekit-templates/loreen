@@ -1,5 +1,6 @@
 {
     "name":"Loreen",
+    "versionTenCompatible": 1,
     "thumbnail":"loreen.png",
     "screenshot":"loreen-screenshot.jpg",
     "templateType":"blog",
